@@ -26,8 +26,8 @@ If you would like to run the app locally from your own machine, follow these ins
 
 ![alt text](/app/public/images/1.png)
 ![alt text](/app/public/images/2.png)
-![alt text](/app/public/images/3.png)
 ![alt text](/app/public/images/4.png)
+![alt text](/app/public/images/3.png)
 
 
 ## Authors
