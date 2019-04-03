@@ -20,7 +20,8 @@ If you would like to run the app locally from your own machine, follow these ins
 * Enter node server.js, which will initiate the server on http://localhost:3000.
 
 ## Getting Started
-<link for heroku>
+
+ https://fast-everglades-97894.herokuapp.com/
 
 ## Screen Shots
 
