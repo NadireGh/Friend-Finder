@@ -1,33 +1,22 @@
-//=============================== DEPENDENCIES ==========================================
+//Dependencies:
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
 
-// require the Express and path node packages
-var express = require("express");
-var path = require("path");
-
-//============================ EXPRESS CONFIGURATION ====================================
-
-// set up Express server 
 var app = express();
-
-// Set initial port and allow port to be set by Heroku
 var PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("./app/public"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-//=================================== ROUTES =============================================
-
-// Establish routes to my html and api js files from my Express server 
+//ROUTER
 require('./app/routing/api-routes.js')(app); 
 require('./app/routing/html-routes.js')(app);
 
-//=================================== INITIATION =========================================
-
-// Initiate my server on the specified port
-app.listen(PORT, function() {
-    // Log with link when server has started
-    console.log('App listening on PORT: ' + PORT);
+// Starts the server to begin listening
+app.listen(PORT, function () {
+  console.log('App listening on PORT: ' + PORT);
 });
-  
